@@ -19,7 +19,7 @@ public:
 	~Cat();
 
 	// Member Functions
-	void	makeSound();
+	void	makeSound() const;
 private:
 };
 

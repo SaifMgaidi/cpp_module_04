@@ -39,7 +39,7 @@ Cat::~Cat()
 
 
 //--------------------Member Functions-------------------------------------------
-void	Cat::makeSound()
+void	Cat::makeSound() const
 {
 	std::cout << "Cat named \'" << type << "\': Miaou Miaou !\n";
 }

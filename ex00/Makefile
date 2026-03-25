@@ -8,7 +8,9 @@ CFLAGS = -std=c++98 -Wall -Wextra -Werror -I.
 SRC =	Animal.cpp \
 		Dog.cpp \
 		Cat.cpp \
-		main.cpp
+		main.cpp \
+		WrongAnimal.cpp \
+		WrongCat.cpp
 
 OBJ = $(SRC:%.cpp=%.o)
 

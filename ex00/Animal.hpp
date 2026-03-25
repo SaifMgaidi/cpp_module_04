@@ -14,10 +14,11 @@ public:
 	Animal&	operator=(const Animal& other);
 
 	// Destructor
-	~Animal();
+	virtual ~Animal();
 
 	// Member Functions
-	void	makeSound();
+	std::string		getType() const;
+	virtual void	makeSound() const;
 
 protected:
 	std::string	type;

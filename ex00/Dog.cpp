@@ -41,7 +41,7 @@ Dog::~Dog()
 
 
 //--------------------Member Functions-------------------------------------------
-void	Dog::makeSound()
+void	Dog::makeSound() const
 {
 	std::cout << "Dog named \'" << type << "\': Waouf Waouf !\n";
 }

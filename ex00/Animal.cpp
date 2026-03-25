@@ -42,8 +42,13 @@ Animal::~Animal()
 
 
 //-------------------Member Functions------------------------------------------
-void	Animal::makeSound()
+std::string	Animal::getType() const
 {
-	std::cout << "Animal: no sound\n";
+	return (type);
+}
+
+void	Animal::makeSound() const
+{
+	std::cout << "Animal named \'" << type << "\': generic sound !\n";
 }
 
