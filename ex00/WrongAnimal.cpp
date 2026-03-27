@@ -2,6 +2,7 @@
 
 //-------------------------Constructors-----------------------------------
 WrongAnimal::WrongAnimal()
+:	type("")
 {
 	std::cout << "WrongAnimal: default constructor called for \'" << type << "\'\n";
 }

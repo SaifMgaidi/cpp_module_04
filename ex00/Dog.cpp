@@ -23,7 +23,7 @@ Dog::Dog(const std::string& typeName)
 
 Dog&	Dog::operator=(const Dog& other)
 {
-	if (this == &other)
+	if (this != &other)
 	{
 		Animal::operator=(other);
 	}

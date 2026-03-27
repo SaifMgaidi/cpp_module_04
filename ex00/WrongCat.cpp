@@ -22,7 +22,7 @@ WrongCat::WrongCat(const WrongCat& other)
 
 WrongCat&	WrongCat::operator=(const WrongCat& other)
 {
-	if (this == &other)
+	if (this != &other)
 	{
 		WrongAnimal::operator=(other);
 	}
