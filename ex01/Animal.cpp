@@ -11,7 +11,7 @@ Animal::Animal()
 Animal::Animal(const Animal& other)
 :	type(other.type)
 {
-	std::cout << "Animal: copy Constructor called for \'" << type << "\'\n";
+	std::cout << "Animal: copy constructor called for \'" << type << "\'\n";
 }
 
 

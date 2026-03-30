@@ -7,8 +7,9 @@ Brain::Brain()
 }
 
 Brain::Brain(const Brain& other)
-:	ideas(other.ideas)
 {
+	for (unsigned int i = 0; i < 100; ++i)
+		ideas[i] = other.ideas[i];
 	std::cout << "Brain: copy constructor called\n";
 }
 

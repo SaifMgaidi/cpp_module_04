@@ -1,4 +1,4 @@
-NAME = animal
+NAME = brain
 
 RM = rm -rf
 CC = c++

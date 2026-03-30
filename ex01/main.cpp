@@ -1,35 +1,38 @@
 #include "Animal.hpp"
-#include "WrongAnimal.hpp"
+#include "Brain.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
-#include "WrongCat.hpp"
 
 
 int main()
 {
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
-	delete meta;
-	delete j;
-	delete i;
+	int	arraySize = 4;
 
-	std::cout << "\n--------------------------Wrong Case------------------------------------\n";
-	const WrongAnimal* wrong_animal = new WrongAnimal();
-	const WrongAnimal* wrong_cat = new WrongCat();
+	Animal*	array[arraySize];
 
-	std::cout << wrong_animal->getType() << " " << std::endl;
-	std::cout << wrong_cat->getType() << " " << std::endl;
+	std::cout << "-------------------creation animals array---------------------------\n";
+	for (int i = 0; i < arraySize / 2; ++i)
+		array[i] = new Cat();
+	
+	for (int i = arraySize / 2 ; i < arraySize; ++i)
+		array[i] = new Dog();
+	
+	std::cout << "\n-------------------animals sounds---------------------------\n";
+	for (int i = 0; i < arraySize; ++i)
+		array[i]->makeSound();
 
-	wrong_animal->makeSound();
-	wrong_cat->makeSound();
 
-	delete wrong_cat;
-	delete wrong_animal;
-	return 0;
+	std::cout << "\n-------------------destruction animals---------------------------\n";	
+	for (int i = 0; i < arraySize; ++i)
+		delete array[i];
+
+	std::cout << "\n-------------------case deep copy---------------------------\n";
+	Dog	basicDog("test");
+
+	{
+		std::cout << "\nenter in the scope....\n";
+		Dog	tmpDog = basicDog;
+		std::cout << "quit in the scope....\n\n";
+	}
+	return (0);
 }
