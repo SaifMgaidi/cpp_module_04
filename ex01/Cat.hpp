@@ -19,7 +19,9 @@ public:
 	~Cat();
 
 	// Member Functions
-	void	makeSound() const;
+	void		makeSound() const;
+	void		setIdea(int index, std::string idea);
+	std::string	getIdea(int index) const;
 private:
 	Brain*	brain;
 };
