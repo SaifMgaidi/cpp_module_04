@@ -44,3 +44,8 @@ std::string	const & AMateria::getType() const
 {
 	return (type_);
 }
+
+void	AMateria::use(ICharacter& target)
+{
+	std::cout << "AMateria: member function use() is called for the target: " << target.getName() << "\n";
+}
