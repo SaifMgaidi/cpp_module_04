@@ -1,4 +1,5 @@
 #include "Character.hpp"
+#include "AMateria.hpp"
 
 //----------------------------Constructors------------------------------------------
 Character::Character()
@@ -74,7 +75,10 @@ void	Character::equip(AMateria* m)
 	for (int i = 0; i < 4; ++i)
 	{
 		if (inventory_[i] == NULL)
+		{
 			inventory_[i] = m;
+			break ;
+		}
 	}
 }
 
