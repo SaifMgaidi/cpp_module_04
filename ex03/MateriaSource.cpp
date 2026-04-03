@@ -5,7 +5,7 @@ MateriaSource::MateriaSource()
 {
 	for (int i = 0; i < 4; ++i)
 		materias_[i] = NULL;
-	std::cout << "MateriaSource: default constructor called\n";
+	//std::cout << "MateriaSource: default constructor called\n";
 }
 
 MateriaSource::MateriaSource(const MateriaSource& other)
@@ -17,7 +17,7 @@ MateriaSource::MateriaSource(const MateriaSource& other)
 		else
 			materias_[i] = NULL;
 	}
-	std::cout << "MateriaSource: copy constructor called\n";
+	//std::cout << "MateriaSource: copy constructor called\n";
 }
 
 
@@ -34,7 +34,7 @@ MateriaSource&	MateriaSource::operator=(const MateriaSource& other)
 				materias_[i] = NULL;
 		}
 	}
-	std::cout << "MateriaSource: copy assignment operator called\n";
+	//std::cout << "MateriaSource: copy assignment operator called\n";
 	return (*this);
 }
 
@@ -44,7 +44,7 @@ MateriaSource::~MateriaSource()
 {
 	for (int i = 0; i < 4; ++i)
 		delete materias_[i];
-	std::cout << "MateriaSource: destructor called\n";
+	//std::cout << "MateriaSource: destructor called\n";
 }
 
 

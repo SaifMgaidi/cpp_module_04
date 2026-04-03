@@ -7,7 +7,7 @@ Character::Character()
 {
 	for (int i = 0; i < 4; ++i)
 		inventory_[i] = NULL;
-	std::cout << "Character: default constructor called for \'" << name_ << "\'\n";
+	//std::cout << "Character: default constructor called for \'" << name_ << "\'\n";
 }
 
 
@@ -21,7 +21,7 @@ Character::Character(const Character& other)
 		else
 			inventory_[i] = NULL;
 	}
-	std::cout << "Character: copy constructor called for \'" << name_ << "\'\n";
+	//std::cout << "Character: copy constructor called for \'" << name_ << "\'\n";
 }
 
 
@@ -30,7 +30,7 @@ Character::Character(const std::string& name)
 {
 	for (int i = 0; i < 4; ++i)
 		inventory_[i] = NULL;
-	std::cout << "Character: parameters constructor called for \'" << name_ << "\'\n";
+	//std::cout << "Character: parameters constructor called for \'" << name_ << "\'\n";
 }
 
 
@@ -48,7 +48,7 @@ Character&	Character::operator=(const Character& other)
 				inventory_[i] = NULL;
 		}
 	}
-	std::cout << "Character: copy assignment operator called for \'" << name_ << "\'\n";
+	//std::cout << "Character: copy assignment operator called for \'" << name_ << "\'\n";
 	return (*this);
 }
 
@@ -58,7 +58,7 @@ Character::~Character()
 {
 	for (int i = 0; i < 4; ++i)
 		delete inventory_[i];
-	std::cout << "Character: destructor called for \'" << name_ << "\'\n";
+	//std::cout << "Character: destructor called for \'" << name_ << "\'\n";
 }
 
 
@@ -77,6 +77,7 @@ void	Character::equip(AMateria* m)
 		if (inventory_[i] == NULL)
 		{
 			inventory_[i] = m;
+			//std::cout << name_ << " equips himself with the \'" << m->getType() << "\' materia\n";
 			break ;
 		}
 	}
@@ -87,6 +88,7 @@ void	Character::unequip(int idx)
 {
 	if (idx < 0 || idx >= 4 || !inventory_[idx])
 		return ;
+	//std::cout << name_ << " disarms himself of the \'" << inventory_[idx]->getType() << "\' materia\n";
 	inventory_[idx] = NULL;
 }
 
